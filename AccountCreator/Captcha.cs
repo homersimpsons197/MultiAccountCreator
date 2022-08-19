@@ -19,7 +19,7 @@ namespace AccountCreator
             {
 
                 var client = new RestClient("http://2captcha.com/in.php");
-                string reqUrl = "http://2captcha.com/in.php?key=d77072070b4a8a5ba9cfbb775693a083&method=userrecaptcha&googlekey=" + key + "&pageurl=" + url + "&proxy=" + p + "&proxytype=http";
+                string reqUrl = "http://2captcha.com/in.php?key=xxx072070b4a8a5ba9cfbxxx56xxx083&method=userrecaptcha&googlekey=" + key + "&pageurl=" + url + "&proxy=" + p + "&proxytype=http";
                 var request = new RestRequest(reqUrl, Method.Post);
                 RestResponse response = client.Execute(request);
                 Console.WriteLine("Captcha receive with success: " + response.IsSuccessful + "\n" + response.Content);
@@ -37,7 +37,7 @@ namespace AccountCreator
                     Console.WriteLine("Checking status...");
                     client = new RestClient("http://2captcha.com/res.php");
 
-                    request = new RestRequest("http://2captcha.com/res.php?key=d77072070b4a8a5ba9cfbb775693a083&action=get&id=" + id, Method.Get);
+                    request = new RestRequest("http://2captcha.com/res.php?key=xxx072070b4a8a5ba9cfbxxx56xxx083&action=get&id=" + id, Method.Get);
                     response = client.Execute(request);
                     Thread.Sleep(5000);
                 }
@@ -58,7 +58,7 @@ namespace AccountCreator
         {                     
             var client = new RestClient("http://2captcha.com/in.php");
 
-            string reqUrl = "http://2captcha.com/in.php?key=d77072070b4a8a5ba9cfbb775693a083&method=hcaptcha&sitekey=" + key + "&pageurl=" + url + "&proxy=" + p + "&proxytype=http";
+            string reqUrl = "http://2captcha.com/in.php?key=xxx072070b4a8a5ba9cfbxxx56xxx083&method=hcaptcha&sitekey=" + key + "&pageurl=" + url + "&proxy=" + p + "&proxytype=http";
             var request = new RestRequest(reqUrl, Method.Post);
             RestResponse response = client.Execute(request);
             f.rTxtLog.Text += "HCaptcha response: " + response.Content;
@@ -77,7 +77,7 @@ namespace AccountCreator
                 Console.WriteLine("Checking status...");
                 client = new RestClient("http://2captcha.com/res.php");
 
-                request = new RestRequest("http://2captcha.com/res.php?key=d77072070b4a8a5ba9cfbb775693a083&action=get&id=" + id, Method.Get);
+                request = new RestRequest("http://2captcha.com/res.php?key=xxx072070b4a8a5ba9cfbxxx56xxx083&action=get&id=" + id, Method.Get);
                 response = client.Execute(request);
                 f.rTxtLog.Text += response.Content;
                 Thread.Sleep(5000);
